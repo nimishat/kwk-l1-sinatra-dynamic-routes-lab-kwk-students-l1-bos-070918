@@ -5,6 +5,7 @@ class App < Sinatra::Base
  get '/' do
    "Welcome to your Home Page"
  end
+ 
  get '/reversename/:name' do
    @name = params[:name].reverse
    "Your reversed name is #{@name}. "
