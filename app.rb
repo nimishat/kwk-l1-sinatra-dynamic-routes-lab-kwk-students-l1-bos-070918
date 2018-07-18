@@ -24,6 +24,7 @@ class App < Sinatra::Base
    for i in 1..@num
     @all_phrases+="#{@phrases}\n"
    end
+ end
  
  get '/say/:word1/:word2/:word3/:word4/:word5' do
    @word_1 = params[:word1]
@@ -39,5 +40,4 @@ class App < Sinatra::Base
    practice = eval("#{params[:number1]} #{operators[params[:operation]]} #{params[:number2]}")
    return practice.to_s
  end
-end
 end
